@@ -120,3 +120,4 @@
 - Added fuzzy report-intent matching so common one-character typos such as `gant` still resolve to the intended export artifact.
 - Reconciled Global handoff status with task completion: completed tasks now always show as Accepted, including after Task View and AI status updates.
 - Added a Render blueprint for static deployment with `npm ci && npm run build`, `./dist` publishing, and SPA route rewrites to `index.html`.
+- Fixed the fuzzy AI intent matcher token typing so TypeScript builds cleanly on Render.

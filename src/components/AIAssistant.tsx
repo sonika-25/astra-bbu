@@ -135,7 +135,7 @@ function typoDistance(a: string, b: string): number {
 }
 
 function fuzzyIntent(text: string, ...terms: string[]): boolean {
-  const tokens = text.toLowerCase().match(/[a-z0-9]+/g) ?? [];
+  const tokens: string[] = text.toLowerCase().match(/[a-z0-9]+/g) ?? [];
   return terms.some(term =>
     tokens.includes(term) ||
     (term.length >= 4 && tokens.some(token => Math.abs(token.length - term.length) <= 1 && typoDistance(token, term) <= 1)));
