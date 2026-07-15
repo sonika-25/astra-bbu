@@ -1,0 +1,73 @@
+:root {
+  /* LaunchPAL 2.0 — clean light theme with AZ accents */
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --surface-2: #f2f4f7;
+  --border: #e4e7ec;
+  --text: #101828;
+  --muted: #667085;
+  --text-secondary: #475467;
+  --text-muted: #98a2b3;
+  --border-strong: #cfd4dc;
+
+  --navy: #0c2340;      /* AZ navy */
+  --magenta: #d0006f;   /* AZ mulberry */
+  --magenta-soft: #fdf2f8;
+
+  /* Unified status colours (one vocabulary everywhere) */
+  --s-delayed: #d92d20;
+  --s-delayed-bg: #fef3f2;
+  --s-at-risk: #dc6803;
+  --s-at-risk-bg: #fffaeb;
+  --s-on-track: #079455;
+  --s-on-track-bg: #ecfdf3;
+  --s-completed: #1570ef;
+  --s-completed-bg: #eff8ff;
+  --s-not-started: #98a2b3;
+  --s-not-started-bg: #f2f4f7;
+  --s-na: #475467;
+  --s-na-bg: #eaecf0;
+
+  --radius: 10px;
+  --shadow: 0 1px 3px rgba(16, 24, 40, .08), 0 1px 2px rgba(16, 24, 40, .04);
+  --shadow-lg: 0 8px 24px rgba(16, 24, 40, .12);
+
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: var(--text);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root { height: 100%; }
+
+body {
+  background: var(--bg);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+button { font: inherit; cursor: pointer; }
+select, input { font: inherit; }
+
+/* Solid status colour helpers (dots, badges, bars) */
+.st-delayed { background: var(--s-delayed); }
+.st-at-risk { background: var(--s-at-risk); }
+.st-on-track { background: var(--s-on-track); }
+.st-completed { background: var(--s-completed); }
+.st-not-started { background: var(--s-not-started); }
+.st-not-applicable { background: var(--s-na); }
+
+/* Soft pill variants (text on tinted background) */
+.pill {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 10px; border-radius: 999px;
+  font-size: 12px; font-weight: 600; white-space: nowrap;
+}
+.pill::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.pill-delayed { color: var(--s-delayed); background: var(--s-delayed-bg); }
+.pill-at-risk { color: var(--s-at-risk); background: var(--s-at-risk-bg); }
+.pill-on-track { color: var(--s-on-track); background: var(--s-on-track-bg); }
+.pill-completed { color: var(--s-completed); background: var(--s-completed-bg); }
+.pill-not-started { color: var(--s-na); background: var(--s-not-started-bg); }
+.pill-not-applicable { color: var(--s-na); background: var(--s-na-bg); }
+.pill-upcoming { color: var(--muted); background: var(--surface-2); }
