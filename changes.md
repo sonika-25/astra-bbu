@@ -119,3 +119,4 @@
 - Reworked Portfolio Overview controls to match the reference: moved the list/matrix switcher beside KPIs and added CSV Export, Clear, and the status legend to the filter row.
 - Added fuzzy report-intent matching so common one-character typos such as `gant` still resolve to the intended export artifact.
 - Reconciled Global handoff status with task completion: completed tasks now always show as Accepted, including after Task View and AI status updates.
+- Added a Render blueprint for static deployment with `npm ci && npm run build`, `./dist` publishing, and SPA route rewrites to `index.html`.
